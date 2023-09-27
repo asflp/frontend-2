@@ -1,0 +1,16 @@
+@import "fonts"
+@import "colors"
+
+
+@mixin font-master($size, $weight, $height)
+  color: $black-for-text
+  font-family: Inter, sans-serif
+  font-style: normal
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
+  margin: 0
+
+@mixin box($width)
+  justify-content: $width
+  align-items: center

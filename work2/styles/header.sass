@@ -1,0 +1,122 @@
+@import "colors"
+@import "fonts"
+@import "styles"
+
+
+.header__navigate
+  height: 45px
+  vertical-align: middle
+  padding: 16px 52px
+
+.header__content
+  height: 36px
+  display: flex
+  @include box(space-between)
+
+  &__words
+    display: flex
+    margin: 0 6px
+    align-items: center
+
+    button
+      padding: 0 0 0 40px
+      background: white
+      border: none
+      @include font-master(14px, 600, 24px)
+
+    img
+      margin: 0
+      height: 18px
+      width: 18px
+
+.logo
+  width: 119px
+  height: auto
+
+.icons__navigation
+  display: inline-flex
+  @include box(flex-end)
+  margin: 4px 0
+
+  &__img
+    height: 28px
+    width: 28px
+    margin-left: 20px
+
+  &__ellipse
+    height: 20px
+    width: 20px
+
+  p
+    position: absolute
+    top: 35px
+    right: 67px
+    z-index: 1
+    @include font-master(10px, 700, 12px)
+    color: white
+
+.flipping
+  height: 700px
+  width: auto
+  display: flex
+  align-items: center
+
+  img
+    height: 700px
+    width: 736px
+    align-self: flex-start
+
+.flipping__text
+  justify-content: center
+  margin: 0 0 0 10%
+
+  &__div
+    width: 488px
+
+  &__first
+    @include font-master(16px, 600, 26px)
+
+  h3
+    @include font-master(54px, 600, 62px)
+    letter-spacing: -1px
+
+  &__second
+    @include font-master(18px, 400, 30px)
+
+  &__link
+    width:  fit-content
+    display: inline-block
+    margin: 28px 0 0 0
+    border-bottom: 2px solid #000
+
+    a
+      @include font-master(18px, 600, 32px)
+      text-decoration: none
+      letter-spacing: -0.4px
+
+.flipping__arrows
+  width: 52px
+  height: 52px
+  padding: 10px
+  border: none
+  border-radius: 100px
+  background-color: white
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.06)
+  z-index: 2
+  position: absolute
+
+  &.left
+    left: 28px
+
+  &.right
+    right: 28px
+
+  &.left_2
+    left: 52px
+
+  &.right_2
+    right: 52px
+
+  img
+    width: 32px
+    height: 32px
