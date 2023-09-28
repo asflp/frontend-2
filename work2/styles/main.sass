@@ -1,6 +1,8 @@
 @import "fonts"
 @import "colors"
 @import "header"
+@import "footer"
+@import "styles"
 
 
 .brands
@@ -50,32 +52,23 @@
     width: 424px
     padding-bottom: 32px
     align-items: center
-    font-family: Inter, sans-serif
     text-align: center
-    font-style: normal
 
     img
       width: 424px
       height: 524px
 
     p
+      @include font-master(16px, 400, 26px)
       margin: 16px 0 0 0
       color: $grey-for-text
-      font-size: 16px
-      font-weight: 400
-      line-height: 26px
 
     h6
-      color: $black-for-text
-      font-size: 20px
-      font-weight: 600
-      margin: 0
-      line-height: 28px
+      @include font-master(20px, 600, 28px)
 
 .stock
   padding: 52px
-  align-items: center
-  justify-content: center
+  @include box(center)
 
   &__content
     align-items: center
@@ -87,47 +80,32 @@
       height: 600px
 
   &__text
-    font-family: Inter, sans-serif
-    font-style: normal
-    color: $black-for-text
     justify-content: center
     align-items: flex-start
     width: 456px
 
     &__exclusive
-      font-size: 16px
-      font-weight: 600
-      line-height: 26px
-      margin: 0
+      @include font-master(16px, 600, 26px)
 
     h3
-      font-size: 54px
-      font-weight: 600
-      line-height: 62px
+      @include font-master(54px, 600, 62px)
       letter-spacing: -1px
       margin: 8px 0
 
     &__other
-      font-size: 18px
-      font-weight: 400
-      line-height: 30px
+      @include font-master(18px, 400, 30px)
 
     h5
-      font-size: 34px
-      font-weight: 600
-      line-height: 40px
+      @include font-master(34px, 600, 40px)
       letter-spacing: -0.4px
       margin: 24px 0 32px 0
 
     button
       background-color: $black-for-text
       padding: 10px 24px
-      justify-content: center
-      align-items: center
+      @include box(center)
+      @include font-master(18px, 600, 32px)
       color: white
-      font-size: 18px
-      font-weight: 600
-      line-height: 32px
       letter-spacing: -0.4px
 
 .sign_up
@@ -141,14 +119,12 @@
     width: 100%
     border-radius: 12px
     border: 1px solid #9D9FA1
-    align-items: center
-    justify-content: center
+    @include box(center)
 
   &__content
     display: flex
     margin: 87px 0 79px 0
-    justify-content: center
-    align-items: center
+    @include box(center)
     width: 540px
     flex-direction: column
 
@@ -156,33 +132,23 @@
     display: flex
     flex-direction: column
     gap: 8px
-    font-family: Inter, sans-serif
-    font-style: normal
     text-align: center
-    color: $black-for-text
 
     h4
-      line-height: 54px
-      font-size: 42px
-      font-weight: 600
+      @include font-master(42px, 600, 54px)
       letter-spacing: -0.4px
-      margin: 0
 
     p
-      font-size: 18px
-      font-weight: 400
-      line-height: 30px
-      margin: 0
+      @include font-master(18px, 400, 30px)
 
   &__form
     margin: 24px 0 0 0
     height: 52px
     width: 100%
     display: flex
-    align-items: center
+    @include box(center)
     border-bottom: 1px solid #D0D5DD
     gap: 8px
-    justify-content: center
 
     img
       width: 24px
@@ -194,31 +160,21 @@
     input
       width: 100%
       border: none
-      font-family: Inter, sans-serif
-      font-size: 16px
-      font-style: normal
-      font-weight: 400
-      line-height: 26px
+      @include font-master(16px, 400, 26px)
       color: #9D9FA1
 
     button
       border: none
       background-color: white
-      font-family: Inter, sans-serif
-      font-size: 16px
-      font-style: normal
-      font-weight: 600
+      @include font-master(16px, 600, 28px)
       letter-spacing: -0.4px
-      color: $black-for-text
-      line-height: 28px
 
 .exquisite
   background-image: url("images/exquisite.png")
   background-size: cover
   display: flex
   height: 598px
-  align-items: center
-  justify-content: center
+  @include box(center)
   margin: 52px
 
   &__text
@@ -226,148 +182,20 @@
     font-style: normal
     width: 478px
     text-align: center
-    color: white
 
     h4
-      font-size: 42px
-      font-weight: 600
-      line-height: 54px
+      @include font-master(42px, 600, 54px)
       letter-spacing: -0.4px
-      margin: 0
+      color: white
 
     p
+      @include font-master(18px, 400, 30px)
       margin: 13px 0 24px 0
-      font-size: 18px
-      font-weight: 400
-      line-height: 30px
+      color: white
 
     button
-      font-family: Inter, sans-serif
-      font-style: normal
+      @include font-master(18px, 500, 32px)
       background-color: transparent
       border: none
       border-bottom: 1px solid #FFF
-      font-size: 18px
-      font-weight: 500
-      line-height: 32px
       color: white
-
-footer
-  padding: 72px 52px 32px 52px
-  display: flex
-  flex-direction: column
-  gap: 72px
-
-.footer
-  display: flex
-  gap: 384px
-  align-items: flex-start
-
-  &__contacts
-    display: flex
-    width: 310px
-    align-items: flex-start
-    flex-direction: column
-
-    img
-      width: 119px
-      height: 36px
-
-    p
-      color: #475467
-      margin: 16px 0 24px 0
-      font-family: Inter, sans-serif
-      font-size: 16px
-      font-style: normal
-      font-weight: 400
-      line-height: 26px
-
-  &__social
-    display: flex
-    align-items: flex-start
-    gap: 16px
-
-    img
-      height: 18px
-      width: 18px
-      margin: 9px
-
-  &__link
-    display: flex
-    gap: 120px
-    font-family: Inter, sans-serif
-    font-style: normal
-    font-size: 14px
-
-    &__header
-      list-style-type: none
-      margin: 0 0 4px 0
-      color: $black-for-text
-      font-weight: 600
-      line-height: 22px
-
-    &__li
-      list-style-type: none
-      margin: 12px 0 0 0
-      color: $grey_for-text
-      font-weight: 400
-      line-height: 22px
-
-  &__bottom
-    display: flex
-    padding-top: 24px
-    justify-content: space-between
-    border-top: 1px solid #D0D5DD
-
-    p
-      font-family: Inter, sans-serif
-      font-style: normal
-      font-size: 14px
-      margin: 0
-      color: $grey_for-text
-      font-weight: 400
-      line-height: 22px
-
-    &__buttons
-      display: flex
-      gap: 32px
-
-      p
-        font-family: Inter, sans-serif
-        font-size: 14px
-        font-style: normal
-        font-weight: 600
-        line-height: 24px
-
-      p::after
-        content: ""
-        position: absolute
-        margin-left: 2px
-        background-image: url("images/chevron-down.svg")
-        height: 18px
-        width: 18px
-
-
-    &__language
-      display: flex
-      gap: 8px
-      align-items: center
-
-      img
-        width: 18px
-        height: 14px
-
-      p
-        font-family: Inter, sans-serif
-        font-size: 14px
-        font-style: normal
-        font-weight: 600
-        line-height: 24px
-
-      p::after
-        content: ""
-        position: absolute
-        margin-left: 2px
-        background-image: url("images/chevron-down.svg")
-        height: 18px
-        width: 18px

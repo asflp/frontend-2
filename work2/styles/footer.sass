@@ -1,0 +1,101 @@
+@import "styles"
+@import "colors"
+@import "fonts"
+
+
+footer
+  padding: 72px 52px 32px 52px
+  display: flex
+  flex-direction: column
+  gap: 72px
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+
+  &__contacts
+    display: flex
+    width: 310px
+    align-items: flex-start
+    flex-direction: column
+
+    img
+      width: 119px
+      height: 36px
+
+    p
+      @include font-master(16px, 400, 26px)
+      color: #475467
+      margin: 16px 0 24px 0
+
+  &__social
+    display: flex
+    align-items: flex-start
+    gap: 16px
+
+    img
+      height: 18px
+      width: 18px
+      margin: 9px
+
+  &__link
+    display: flex
+    gap: 120px
+
+    &__header
+      @include font-master(14px, 600, 24px)
+      list-style-type: none
+      margin: 0 0 4px 0
+
+    &__li
+      @include font-master(14px, 400, 22px)
+      list-style-type: none
+      margin: 12px 0 0 0
+      color: $grey_for-text
+
+  &__bottom
+    display: flex
+    padding-top: 24px
+    justify-content: space-between
+    border-top: 1px solid #D0D5DD
+
+    p
+      @include font-master(14px, 400, 22px)
+      color: $grey_for-text
+
+    &__buttons
+      display: flex
+      gap: 32px
+
+      p
+        @include font-master(14px, 600, 24px)
+
+      p::after
+        content: ""
+        position: absolute
+        margin-left: 2px
+        background-image: url("images/chevron-down.svg")
+        height: 18px
+        width: 18px
+
+
+    &__language
+      display: flex
+      gap: 8px
+      align-items: center
+
+      img
+        width: 18px
+        height: 14px
+
+      p
+        @include font-master(14px, 600, 24px)
+
+      p::after
+        content: ""
+        position: absolute
+        margin-left: 2px
+        background-image: url("images/chevron-down.svg")
+        height: 18px
+        width: 18px
