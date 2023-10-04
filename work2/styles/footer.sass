@@ -1,6 +1,7 @@
 @import "styles"
 @import "colors"
 @import "fonts"
+@import "adaptiv"
 
 
 footer
@@ -8,17 +9,32 @@ footer
   display: flex
   flex-direction: column
   gap: 72px
+  background-color: $background
+
+  @include device(mobile)
+    padding: 7% 9% 5% 9%
+    gap: 0
 
 .footer
   display: flex
   justify-content: space-between
   align-items: flex-start
 
+  @include device(mobile)
+    flex-direction: column
+    justify-content: center
+
   &__contacts
     display: flex
     width: 310px
     align-items: flex-start
     flex-direction: column
+
+    @include device(mobile)
+      width: 100%
+
+    @include device(tablet)
+      margin-right: 7%
 
     img
       width: 119px
@@ -29,10 +45,19 @@ footer
       color: #475467
       margin: 16px 0 24px 0
 
+      @include device(mobile)
+        @include setSize(14px, 22px)
+
   &__social
     display: flex
     align-items: flex-start
     gap: 16px
+
+    @include device(mobile)
+      display: none
+
+    @include device(tablet)
+      display: none
 
     img
       height: 18px
@@ -42,6 +67,12 @@ footer
   &__link
     display: flex
     gap: 120px
+
+    @include device(mobile)
+      display: none
+
+    @include device(tablet)
+      display: none
 
     &__header
       @include font-master(14px, 600, 24px)
@@ -54,15 +85,51 @@ footer
       margin: 12px 0 0 0
       color: $grey_for-text
 
+    &__mobile
+      display: flex
+      width: 100%
+      max-width: 570px
+
+      @include device(tablet)
+        max-width: 400px
+
+      @include device(desktop)
+        display: none
+
+      ul
+        width: 100%
+        padding: 0
+        margin: 0
+
+      li
+        display: flex
+        @include box(space-between)
+        list-style-type: none
+        height: 44px
+        @include font-master(14px, 600, 24px)
+        border-bottom: 1.5px solid #D0D5DD
+
+        @include device(mobile)
+          border-bottom: 1px solid #D0D5DD
+
   &__bottom
     display: flex
     padding-top: 24px
     justify-content: space-between
     border-top: 1px solid #D0D5DD
 
-    p
+    @include device(mobile)
+      border: none
+      @include box(center)
+      margin: 32px 0
+      padding: 0
+
+    &__p
       @include font-master(14px, 400, 22px)
       color: $grey_for-text
+
+      @include device(mobile)
+        display: none
 
     &__buttons
       display: flex
@@ -70,10 +137,12 @@ footer
 
       p
         @include font-master(14px, 600, 24px)
+        position: relative
 
       p::after
         content: ""
         position: absolute
+        top: 15%
         margin-left: 2px
         background-image: url("images/chevron-down.svg")
         height: 18px
@@ -99,3 +168,33 @@ footer
         background-image: url("images/chevron-down.svg")
         height: 18px
         width: 18px
+
+    &__mobile
+
+      @include device(desktop)
+        display: none
+
+      @include device(tablet)
+        display: none
+
+      p
+        padding: 16px 0 0 0
+        @include font-master(14px, 400, 22px)
+        color: $grey_for-text
+        text-align: center
+
+.footer__social__mobile
+    display: flex
+    justify-content: center
+    gap: 16px
+
+    @include device(desktop)
+      display: none
+
+    @include device(tablet)
+      display: none
+
+    img
+      height: 18px
+      width: 18px
+      margin: 9px

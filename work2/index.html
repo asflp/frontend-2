@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     <title>Clonify</title>
@@ -22,7 +22,7 @@
                 <button>Home</button>
                 <button>Shop</button>
                 <button>Product</button>
-                <img src="images/chevron-down.svg">
+                <img src="images/chevron-down.svg" alt="">
                 <button>Pages</button>
             </nav>
 
@@ -36,11 +36,14 @@
                 <a href="">
                     <img class="icons__navigation__img" src="images/like.svg" alt="like">
                 </a>
-                <a class="icon__basket" href="">
-                    <img class="icons__navigation__img" src="images/basket.svg" alt="basket">
+                <a href="">
+                    <img class="icons__navigation__basket" src="images/basket.svg" alt="basket">
                 </a>
                 <img class="icons__navigation__ellipse" src="images/ellipse.svg">
                 <p>2</p>
+                <a href="">
+                    <img class="icons__navigation__hamb" src="images/hamburger.svg" alt="menu">
+                </a>
             </nav>
         </div>
     </div>
@@ -82,13 +85,15 @@
             </button>
 
             <div class="brands__img">
-                <img src="images/brands/nike.svg">
-                <img src="images/brands/hash.svg">
-                <img src="images/brands/puma.svg">
-                <img src="images/brands/shoei.svg">
-                <img src="images/brands/marc.svg">
-                <img src="images/brands/supreme.svg">
+                <img class="brands__img__one" src="images/brands/nike.svg">
+                <img class="brands__img__one" src="images/brands/hash.svg">
+                <img class="brands__img__two" src="images/brands/puma.svg">
+                <img class="brands__img__two" src="images/brands/shoei.svg">
+                <img class="brands__img__three" src="images/brands/marc.svg">
+                <img class="brands__img__three" src="images/brands/supreme.svg">
             </div>
+            
+            <img class="brands__navigation" src="images/brands/dots.svg">
         </div>
     </section>
 
@@ -145,6 +150,10 @@
 
                     <button>Signup</button>
                 </div>
+
+                <button class="sign_up__mobile__button">
+                    Signup
+                </button>
             </div>
         </div>
     </section>
@@ -159,14 +168,91 @@
 
 </main>
 
-<footer>
+    <footer>
 
-    <div class="footer">
-        <div class="footer__contacts">
-            <img src="images/logo.svg">
-            <p>Phosf luorescently engage worldwide method process shopping.</p>
+        <div class="footer">
+            <div class="footer__contacts">
+                <img src="images/logo.svg">
+                <p>Phosf luorescently engage worldwide method process shopping.</p>
 
-            <div class="footer__social">
+                <div class="footer__social">
+                    <a href="#">
+                        <img src="images/social/facebook.svg">
+                    </a>
+
+                    <a href="#">
+                        <img src="images/social/instagram.svg">
+                    </a>
+
+                    <a href="#">
+                        <img src="images/social/twitter.svg">
+                    </a>
+
+                    <a href="#">
+                        <img src="images/social/email.svg">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__link">
+                <ul>
+                    <li class="footer__link__header">Product</li>
+                    <li class="footer__link__li">Learn</li>
+                    <li class="footer__link__li">Plugins</li>
+                    <li class="footer__link__li">Gallery</li>
+                    <li class="footer__link__li">Pricing</li>
+                </ul>
+
+                <ul>
+                    <li class="footer__link__header">Information</li>
+                    <li class="footer__link__li">Privacy</li>
+                    <li class="footer__link__li">Cookies</li>
+                    <li class="footer__link__li">Terms</li>
+                    <li class="footer__link__li">Security</li>
+                </ul>
+
+                <ul>
+                    <li class="footer__link__header">Support</li>
+                    <li class="footer__link__li">Updates</li>
+                    <li class="footer__link__li">Discord</li>
+                    <li class="footer__link__li">Startups</li>
+                    <li class="footer__link__li">Contact</li>
+                </ul>
+            </div>
+
+            <div class="footer__link__mobile">
+                <ul>
+                    <li>
+                        Product
+                        <img src="images/chevron-down.svg">
+                    </li>
+                    <li>
+                        Information
+                        <img src="images/chevron-down.svg">
+                    </li>
+                    <li>
+                        Support
+                        <img src="images/chevron-down.svg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__bottom__p">© 2088 Nayzak Design</p>
+
+            <div class="footer__bottom__buttons">
+                <div class="footer__bottom__language">
+                    <img src="images/flag.svg">
+                    <p>English</p>
+                </div>
+
+                <p>USD</p>
+            </div>
+        </div>
+
+        <div class="footer__bottom__mobile">
+            <div class="footer__social__mobile">
                 <a href="#">
                     <img src="images/social/facebook.svg">
                 </a>
@@ -183,49 +269,10 @@
                     <img src="images/social/email.svg">
                 </a>
             </div>
+
+            <p>© 2088 Nayzak Design</p>
         </div>
-
-        <div class="footer__link">
-            <ul>
-                <li class="footer__link__header">Product</li>
-                <li class="footer__link__li">Learn</li>
-                <li class="footer__link__li">Plugins</li>
-                <li class="footer__link__li">Gallery</li>
-                <li class="footer__link__li">Pricing</li>
-            </ul>
-
-            <ul>
-                <li class="footer__link__header">Information</li>
-                <li class="footer__link__li">Privacy</li>
-                <li class="footer__link__li">Cookies</li>
-                <li class="footer__link__li">Terms</li>
-                <li class="footer__link__li">Security</li>
-            </ul>
-
-            <ul>
-                <li class="footer__link__header">Support</li>
-                <li class="footer__link__li">Updates</li>
-                <li class="footer__link__li">Discord</li>
-                <li class="footer__link__li">Startups</li>
-                <li class="footer__link__li">Contact</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer__bottom">
-        <p>© 2088 Nayzak Design</p>
-
-        <div class="footer__bottom__buttons">
-            <div class="footer__bottom__language">
-                <img src="images/flag.svg">
-                <p>English</p>
-            </div>
-
-            <p>USD</p>
-        </div>
-    </div>
-
-</footer>
+    </footer>
 
 </body>
 </html>

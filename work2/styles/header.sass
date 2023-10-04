@@ -1,22 +1,43 @@
 @import "colors"
 @import "fonts"
 @import "styles"
+@import "adaptiv"
 
 
 .header__navigate
   height: 45px
-  vertical-align: middle
   padding: 16px 52px
+  align-items: center
+
+  @include device(mobile)
+    height: 28px
+    padding: 8px 16px
+
+  @include device(tablet)
+    height: 35px
+    padding: 12px 30px
 
 .header__content
   height: 36px
   display: flex
   @include box(space-between)
 
+  @include device(mobile)
+    height: 24px
+
+  @include device(tablet)
+    height: 32px
+
   &__words
     display: flex
     margin: 0 6px
     align-items: center
+
+    @include device(mobile)
+      display: none
+
+    @include device(tablet)
+      display: none
 
     button
       padding: 0 0 0 40px
@@ -30,8 +51,7 @@
       width: 18px
 
 .logo
-  width: 119px
-  height: auto
+  @include images(28px, 0.5vw)
 
 .icons__navigation
   display: inline-flex
@@ -39,39 +59,83 @@
   margin: 4px 0
 
   &__img
-    height: 28px
-    width: 28px
+    @include images(23px, 0.3vw)
+    margin-left: 20px
+
+    @include device(mobile)
+      display: none
+
+    @include device(tablet)
+      display: none
+
+  &__basket
+    @include images(23px, 0.3vw)
     margin-left: 20px
 
   &__ellipse
     height: 20px
-    width: 20px
+    margin-bottom: 3px
+
+    @include device(mobile)
+        height: 18px
+
+    @include device(tablet)
+      height: 19px
 
   p
     position: absolute
-    top: 35px
-    right: 67px
+    top: 26px
+    right: 59px
     z-index: 1
     @include font-master(10px, 700, 12px)
     color: white
 
+    @include device(mobile)
+      top: 13px
+      right: 63px
+
+    @include device(tablet)
+      top: 21px
+      right: 78px
+
+  &__hamb
+    @include images(23px, 0.3vw)
+    margin-left: 16px
+
+    @include device(desktop)
+      display: none
+
+
 .flipping
-  height: 700px
+  height: auto
   width: auto
   display: flex
   align-items: center
+  background-color: $background
+
+  @include device(mobile)
+    flex-direction: column
 
   img
-    height: 700px
-    width: 736px
+    width: 50%
     align-self: flex-start
+
+    @include device(mobile)
+      width: 100%
 
 .flipping__text
   justify-content: center
-  margin: 0 0 0 10%
+  margin-left: 10%
+
+  @include device(mobile)
+    margin: 24px 0 0 0
 
   &__div
-    width: 488px
+    width: 80%
+
+    @include device(mobile)
+      padding: 0 16px
+      width: auto
 
   &__first
     @include font-master(16px, 600, 26px)
@@ -82,17 +146,52 @@
 
   &__second
     @include font-master(18px, 400, 30px)
+    margin-top: 8px
 
   &__link
     width:  fit-content
     display: inline-block
-    margin: 28px 0 0 0
+    margin-top: 28px
     border-bottom: 2px solid #000
 
     a
       @include font-master(18px, 600, 32px)
       text-decoration: none
       letter-spacing: -0.4px
+
+  @include device(mobile)
+    &__first
+      @include setSize(14px, 22px)
+
+    h3
+      @include setSize(28px, 34px)
+      letter-spacing: -0.6px
+
+    &__second
+      @include setSize(16px, 26px)
+      margin-top: 12px
+
+    &__link
+      margin-top: 24px
+
+      a
+        @include setSize(16px,28px)
+
+  @include device(tablet)
+    h3
+      @include fontSize(15px, 18px)
+      letter-spacing: -0.8px
+
+    &__second
+      @include setSize(16px, 26px)
+      margin-top: 12px
+
+    &__link
+      margin-top: 24px
+
+      a
+        @include setSize(16px,28px)
+
 
 .flipping__arrows
   width: 52px
@@ -104,6 +203,12 @@
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.06)
   z-index: 2
   position: absolute
+
+  @include device(mobile)
+    display: none
+
+  @include device(tablet)
+    display: none
 
   &.left
     left: 28px
